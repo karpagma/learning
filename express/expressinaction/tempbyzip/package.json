@@ -1,0 +1,17 @@
+{
+  "name": "tempbyzip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "forecastio": "^1.0.1",
+    "zippity-do-dah": "0.0.2"
+  }
+}

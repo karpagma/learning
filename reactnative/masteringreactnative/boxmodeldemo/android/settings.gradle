@@ -1,0 +1,3 @@
+rootProject.name = 'boxmodeldemo'
+
+include ':app'

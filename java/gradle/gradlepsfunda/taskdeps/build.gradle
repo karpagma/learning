@@ -1,0 +1,41 @@
+
+task taskF {
+    doLast {
+        println "task F"
+    }
+}
+
+task taskE {
+    doLast {
+        println "task E"
+    }
+}
+
+
+task taskD {
+    dependsOn taskE
+    doLast {
+        println "task D"
+    }
+}
+
+task taskC {
+    dependsOn taskE
+    doLast {
+        println "task C"
+    }
+}
+
+task taskB {
+    mustRunAfter taskC
+    doLast {
+        println "task B"
+    }
+}
+
+task taskA {
+    dependsOn taskB, taskC, taskD
+    doLast {
+        println "task A"
+    }
+}

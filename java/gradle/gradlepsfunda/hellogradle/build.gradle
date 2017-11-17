@@ -1,0 +1,28 @@
+def projectVersion = "2.0"
+
+task hello {
+    doLast {
+        println "Hello, Gradle"
+    }
+}
+
+project.task("Task1")
+task("Task2")
+
+task "Task3"
+Task3.doLast {
+    println "this is task-3"
+}
+task Task4
+Task4.description = "Task4 task"
+Task4.doLast {
+    println "this is task4"
+}
+
+task task6 {
+    description "this is task6"
+    dependsOn Task3, Task4
+    doLast {
+        println "this is task 6 - dolast. version $projectVersion"
+    }
+}

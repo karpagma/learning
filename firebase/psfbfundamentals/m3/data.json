@@ -1,0 +1,73 @@
+{
+    "userObjects": {
+        "following": {
+            "user1": {
+                "user2": {
+                    "email" : "user2@fb.com",
+                    "name" : "user 2",
+                    "username" : "user2",
+                    "key": "user2"
+                },
+                "user3": {
+                    "email" : "user3@fb.com",
+                    "name" : "user 3",
+                    "username" : "user3",
+                    "key": "user3"
+                }
+            },
+            "user2": {
+                "user3": {
+                    "email" : "user3@fb.com",
+                    "name" : "user 3",
+                    "username" : "user3",
+                    "key": "user3"
+                }
+            },
+            "user3": {
+                "user2": {
+                    "email" : "user2@fb.com",
+                    "name" : "user 2",
+                    "username" : "user2",
+                    "key": "user2"
+                },
+                "user1": {
+                    "email" : "user1@fb.com",
+                    "name" : "user 1",
+                    "username" : "user1",
+                    "key": "user1"
+                }
+            }
+        }
+    },
+    "tweets": {
+        "user1": {
+            "tweet1": "this is user-1 tweer 1"
+        },
+        "user2": {
+            "tweet2": "this is user-2 tweer 2"
+        },
+        "user3": {
+            "tweet3": "this is user-3 tweer 3"
+        }
+    },
+  "users" : {
+    "user1" : {
+      "email" : "user1@fb.com",
+      "name" : "User 1",
+      "username" : "user1",
+      "tweetCount": 1
+    },
+    "user2" : {
+      "email" : "user2@fb.com",
+      "name" : "User 2",
+      "username" : "user2",
+      "tweetCount": 1
+    },
+    "user3" : {
+      "email" : "user3@fb.com",
+      "name" : "User 3",
+      "username" : "user3",
+      "tweetCount": 1
+    }
+  }
+}

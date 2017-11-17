@@ -1,0 +1,15 @@
+{
+  "name": "fem-dc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "addf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.7.2",
+    "prettier-standard": "^6.0.0"
+  }
+}

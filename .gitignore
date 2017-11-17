@@ -1,0 +1,50 @@
+# logs
+logs
+*.log
+npm-debug.log*
+metastore_db/
+
+# java
+*.class
+*.jar
+.classpath
+.project
+.settings/
+.DS_Store
+.metadata/
+.recommenders/
+target/
+Servers/
+.gradle/
+build/
+**/wrapper/
+
+# nodejs
+node_modules/
+
+# editors
+.idea/
+*.zip
+.vscode
+*.swp
+
+# dist
+dist/
+
+# python
+__pycache__/
+*.pyc
+tags
+.virtualenvs
+venv/
+*.db
+
+# dotnetcore
+obj/
+bin/
+
+# misc
+ml-100k/
+
+# mongodb
+*.dat

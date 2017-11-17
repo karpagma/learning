@@ -1,0 +1,6 @@
+{
+	"ImportPath": "github.com/madhanganesh/learning/cloudfoundry/cfviago",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v60",
+	"Deps": []
+}

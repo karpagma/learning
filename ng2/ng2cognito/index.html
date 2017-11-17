@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="/">
+    <title>One Health</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="app/app.component.css" rel="stylesheet" />
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+
+    <!-- Required for http -->
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+    <!-- Required for routing -->
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+    <!-- Required for cognito -->
+    <script src="node_modules/jsbn/index.js"></script>
+    <script src="node_modules/sjcl/sjcl.js"></script>
+    <script src="node_modules/amazon-cognito-identity-js/dist/aws-cognito-sdk.min.js"></script>
+    <script src="node_modules/amazon-cognito-identity-js/dist/amazon-cognito-identity.min.js"></script>
+    <script src="node_modules/aws-sdk/dist/aws-sdk.min.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script>
+        System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+</head>
+
+<body>
+  <pm-app>Loading App...</pm-app>
+</body>
+
+</html>

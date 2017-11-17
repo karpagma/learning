@@ -1,0 +1,1 @@
+ERROR: 2016/04/09 12:20:45 customlogger.go:33: Something has failed

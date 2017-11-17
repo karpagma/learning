@@ -1,0 +1,1 @@
+//# sourceMappingURL=amazon.cognito-identity-js.js.map

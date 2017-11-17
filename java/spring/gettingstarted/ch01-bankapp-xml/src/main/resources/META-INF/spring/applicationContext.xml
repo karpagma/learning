@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="controller" class="com.mg.learning.FixedDepositController">
+        <property name="fixedDepositService" ref="service" />
+    </bean>
+
+    <bean id="service" class="com.mg.learning.FixedDepositService">
+        <property name="fixedDepositDao" ref="dao" />
+    </bean>
+
+    <bean id="dao" class="com.mg.learning.FixedDepositDao" />
+</beans>

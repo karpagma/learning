@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WebSocket Echo Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://bit.ly/cdn-bootstrap-css">
+    <link rel="stylesheet" href="http://bit.ly/cdn-bootstrap-theme">
+    <script src="http://bit.ly/cdn-bootstrap-jq"></script>
+    <script>    
+        var stock_request = {
+            'stocks': ['APPL', 'MSFT', 'AMZN', 'GOOG', 'YHOO']
+        };
+        var stocks = {
+            APPL: 0,
+            MSFT: 0,
+            AMZN: 0,
+            GOOG: 0,
+            YHOO: 0
+        };
+        var ws = new WebSocket("wss://localhost:8080");    
+        ws.onopen = function(e) {      
+            console.log('Connection to server opened');    
+            ws.send(JSON.stringify(stock_request));
+        }    
+
+        // UI update function
+        var changeStockEntry = function(symbol, originalValue, newValue) {
+            var valElem = $('#' + symbol + ' span');
+            valElem.html(newValue.toFixed(2));
+            if(newValue < originalValue) {
+                valElem.addClass('label-danger');
+                valElem.removeClass('label-success');
+            } else if(newValue > originalValue) {
+                valElem.addClass('label-success');
+                valElem.removeClass('label-danger');
+            }
+        }
+
+        ws.onmessage = e => {
+            var stocksData = JSON.parse(e.data);
+            for(var symbol in stocksData) {
+                if(stocksData.hasOwnProperty(symbol)) {
+                    changeStockEntry(symbol, stocks[symbol], stocksData[symbol]);
+                    stocks[symbol] = stocksData[symbol];
+                }
+            }
+        };
+
+        ws.onerror = e => {
+            console.log("WebSocket failure, error", e);	
+            //handleErrors(e);
+        };
+
+        ws.onclose = function(e) {
+            console.log(e.reason + " " + e.code);
+            for(var symbol in stocks) {
+                if(stocks.hasOwnProperty(symbol)) {
+                    stocks[symbol] = 0;
+                }
+            }
+        }
+
+        //ws.close(1000, 'WebSocket connection closed')
+    </script>
+</head>
+
+<body lang="en">
+    <script src="http://bit.ly/cdn-bootstrap-minjs"></script>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+{
+  "name": "cogapitest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "amazon-cognito-identity-js": "^1.2.0",
+    "aws-sdk": "^2.5.5",
+    "jsbn": "^0.1.0",
+    "sjcl": "^1.0.3"
+  }
+}

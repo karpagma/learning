@@ -1,0 +1,2 @@
+[Master]
+init-hook='import sys; sys.path = list(); sys.path.append("/Users/madhanganesh/tools/google-cloud-sdk4/platform/google_appengine/lib/webapp2-2.3")'
